@@ -16,10 +16,10 @@ CUSTOM_CLASSES = [
 ]
 
 # Load the image
-image = Image.open("demo1.jpg")
+image = Image.open("demo.jpg")
 
 # Initialize the RF-DETR model with pre-trained weights
-model = RFDETRBase(pretrain_weights="checkpoint_best_ema.pth")
+model = RFDETRBase(pretrain_weights="checkpoint_best_total.pth")
 
 # Run inference on the image with a confidence threshold of 0.5
 detections = model.predict(image, threshold=0.5)
